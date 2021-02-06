@@ -1,8 +1,13 @@
+import pdf_resume from '../assets/documents/KHallResume.pdf';
+
 const Page_Resume = () =>
 {
+    console.log("Loading Resume...");
     return (
         <div>
-            <span>Resume Page</span>
+            <object className = "pdf-viewer" data = {pdf_resume} type="application/pdf">
+                <p>Resume</p>
+            </object>
         </div>
       );
 }
