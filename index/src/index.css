@@ -94,3 +94,16 @@ body > #root > div {
   height: 90vh;
   border: outset 5px;
 }
+
+.email-form {
+  display: grid;
+  grid-template-columns: 25% auto;
+}
+
+.email-form > .item-e
+{
+  display: grid;
+  grid-column-end: span 2;
+  width: auto;
+  height: 200px;
+}
