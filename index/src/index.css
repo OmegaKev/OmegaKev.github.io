@@ -70,14 +70,27 @@ body > #root > div {
 
 .content-area {
   display: flex;
-  height: 50vh;
+  height: auto;
   align-items: center;
   justify-content: center;
+  margin: 20px;
 }
 
 .content-area > div {
   display: flex;
   flex-flow: column;
-  justify-content: center;
-  text-align: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+
+.text-border {
+  border: outset 5px;
+  padding: 10px;
+}
+
+.pdf-viewer {
+  width: 70vw;
+  height: 90vh;
+  border: outset 5px;
 }
