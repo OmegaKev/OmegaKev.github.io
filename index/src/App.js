@@ -35,7 +35,7 @@ class MainPageContent extends React.Component {
   constructor(props) {
     super(props);
 
-    this.default = {page_state: 'UnderConstruction'};
+    this.default = {page_state: 'Resume'};
     this.state = this.default;
     this.page = {'About': Page_About, 
                  'UnderConstruction': Page_UnderConstruction,
