@@ -81,8 +81,8 @@ const SideBySideLayout = () =>
           <img src = {proImage} alt="Kevin Hall" />
         </div>
         <div>
+          <Button handleClick = {() => mpRef.current.changePage('Resume')} text = "Resume" /> 
           <Button handleClick = {() => mpRef.current.changePage('About')} text = "About" />
-          <Button handleClick = {() => mpRef.current.changePage('Resume')} text = "Resume" />
           <Button handleClick = {() => mpRef.current.changePage('Contact')} text = "Contact" />
         </div>
       </div>
