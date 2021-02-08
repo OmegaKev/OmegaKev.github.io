@@ -82,11 +82,16 @@ body > #root > div {
   align-items: center;
   width: auto;
   height: auto;
+  max-width: 960px;
 }
 
 .text-border {
   border: outset 5px;
   padding: 10px;
+}
+
+.pg-width {
+  max-width: 960px;
 }
 
 .pdf-viewer {
