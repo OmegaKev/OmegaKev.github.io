@@ -109,6 +109,8 @@ body > #root > div {
 {
   display: grid;
   grid-column-end: span 2;
-  width: auto;
-  height: 200px;
+  min-width: 300px;
+  min-height: 300px;
+  width: 700px;
+  height: 600px;
 }
