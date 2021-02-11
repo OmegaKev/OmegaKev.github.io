@@ -74,7 +74,7 @@ body > #root > div {
   height: auto;
   align-items: center;
   justify-content: center;
-  margin: 20px;
+  margin: 5px;
 }
 
 .content-area > div {
@@ -96,6 +96,7 @@ body > #root > div {
 }
 
 .pdf-viewer {
+  max-width: 1160px;
   width: 70vw;
   height: 86vh;
   border: outset 5px;

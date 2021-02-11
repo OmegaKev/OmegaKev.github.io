@@ -55,10 +55,12 @@ class MainPageContent extends React.Component {
     const Page = this.page[this.state.page_state];
 
     return (
-      <div className = "content-area">
+      <>
         <Toolbox.Header text={this.state.page_state} />
-        <Page />
-      </div>
+        <div className = "content-area">
+          <Page />
+        </div>
+      </>
     );
   }
   
