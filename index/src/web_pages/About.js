@@ -49,7 +49,6 @@ const Page_About = () =>
 {
     return (
         <div>
-            <span>About Me</span>
             <div className="text-border">
                 <span>
                     <h1>Summary</h1>

@@ -112,7 +112,6 @@ const Page_Contact = () =>
 
     return (
         <div>
-            <span>Contact Page</span>
             <form className="email-form text-border" onSubmit={handleEmail}>
                 <label>Email:</label>
                 {/*<input type="text" value={email} onChange = {(event) => handleChange(event, setEmail)} required /> */}

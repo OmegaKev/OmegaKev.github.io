@@ -3,17 +3,10 @@ import {useState} from 'react';
 import React from 'react';
 import proImage from './assets/images/kh_picture.jpg';
 import logo from './logo.svg'
+import * as Toolbox from './ComponentToolbox.js';
 import Page_About from './web_pages/About.js';
 import Page_Resume from './web_pages/Resume.js';
 import Page_Contact from './web_pages/Contact.js';
-
-const Header = ({text}) => {
-  return (
-    <div className = "header_name">
-      <span>{text}</span>
-    </div>
-  );
-}
 
 const Button = ({handleClick, text}) => {
   return (
@@ -37,7 +30,7 @@ class MainPageContent extends React.Component {
 
     this.default = {page_state: 'Resume'};
     this.state = this.default;
-    this.page = {'About': Page_About, 
+    this.page = {'About Me': Page_About, 
                  'UnderConstruction': Page_UnderConstruction,
                  'Resume': Page_Resume,
                  'Contact': Page_Contact};
@@ -63,6 +56,7 @@ class MainPageContent extends React.Component {
 
     return (
       <div className = "content-area">
+        <Toolbox.Header text={this.state.page_state} />
         <Page />
       </div>
     );
@@ -81,16 +75,15 @@ const SideBySideLayout = () =>
           <img src = {proImage} alt="Kevin Hall" />
         </div>
         <div>
-          <Header text = "Kevin Hall" />
+          <Toolbox.Header text = "Kevin Hall" />
         </div>
         <div>
           <Button handleClick = {() => mpRef.current.changePage('Resume')} text = "Resume" /> 
-          <Button handleClick = {() => mpRef.current.changePage('About')} text = "About" />
+          <Button handleClick = {() => mpRef.current.changePage('About Me')} text = "About" />
           <Button handleClick = {() => mpRef.current.changePage('Contact')} text = "Contact" />
         </div>
       </div>
       <div className = "right-column">
-        
         <MainPageContent ref={mpRef} />
       </div>
     </div>
