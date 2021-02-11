@@ -102,7 +102,7 @@ body > #root > div {
 
 .email-form {
   display: grid;
-  grid-template-columns: 25% auto;
+  grid-template-columns: 60px auto;
 }
 
 .email-form > .item-e
