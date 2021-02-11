@@ -10,7 +10,7 @@ class InputText extends React.Component
         this.type = (props.type !== undefined) ? props.type : "text";
         this.handleChange = props.handleChange;
         this.required = (props.required) ? true : false;
-        this.style = {backgroundColor: "White"};
+        this.style = {backgroundColor: ""};
         this.state = {error: false};
     }
 
@@ -25,7 +25,7 @@ class InputText extends React.Component
 
     setErrorState = (bool_state) => {
         if(bool_state === true)this.style = {backgroundColor: "Pink"};
-        else this.style = {backgroundColor: "White"};
+        else this.style = {backgroundColor: ""};
 
         this.setState({error: bool_state});
     }
