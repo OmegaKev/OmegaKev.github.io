@@ -7,10 +7,10 @@ import Page_About from './web_pages/About.js';
 import Page_Resume from './web_pages/Resume.js';
 import Page_Contact from './web_pages/Contact.js';
 
-const Header = () => {
+const Header = ({text}) => {
   return (
     <div className = "header_name">
-      Kevin Hall
+      <span>{text}</span>
     </div>
   );
 }
@@ -81,13 +81,16 @@ const SideBySideLayout = () =>
           <img src = {proImage} alt="Kevin Hall" />
         </div>
         <div>
+          <Header text = "Kevin Hall" />
+        </div>
+        <div>
           <Button handleClick = {() => mpRef.current.changePage('Resume')} text = "Resume" /> 
           <Button handleClick = {() => mpRef.current.changePage('About')} text = "About" />
           <Button handleClick = {() => mpRef.current.changePage('Contact')} text = "Contact" />
         </div>
       </div>
       <div className = "right-column">
-        <Header />
+        
         <MainPageContent ref={mpRef} />
       </div>
     </div>
