@@ -107,12 +107,19 @@ body > #root > div {
   grid-template-columns: 60px auto;
 }
 
+.email-form > label {
+  text-align: right;
+  margin-right: 5px;
+}
+
 .email-form > .item-e
 {
   display: grid;
   grid-column-end: span 2;
   min-width: 300px;
   min-height: 300px;
+  max-width: 80vw;
+  max-height: 80vh;
   width: 700px;
   height: 600px;
 }
