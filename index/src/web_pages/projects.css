@@ -1,0 +1,31 @@
+.repo-name {
+    font-size: xx-large;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.repo-body {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.repo-body > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.list > div {
+    border: solid 1px;
+}
+
+

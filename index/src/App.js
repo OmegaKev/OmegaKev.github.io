@@ -7,6 +7,7 @@ import * as Toolbox from './ComponentToolbox.js';
 import Page_About from './web_pages/About.js';
 import Page_Resume from './web_pages/Resume.js';
 import Page_Contact from './web_pages/Contact.js';
+import Page_Projects from './web_pages/Projects.js';
 
 const Button = ({handleClick, text}) => {
   return (
@@ -33,6 +34,7 @@ class MainPageContent extends React.Component {
     this.page = {'About Me': Page_About, 
                  'UnderConstruction': Page_UnderConstruction,
                  'Resume': Page_Resume,
+                 'Projects' : Page_Projects,
                  'Contact': Page_Contact};
   }
 
@@ -80,7 +82,8 @@ const SideBySideLayout = () =>
           <Toolbox.Header text = "Kevin Hall" />
         </div>
         <div>
-          <Button handleClick = {() => mpRef.current.changePage('Resume')} text = "Resume" /> 
+          <Button handleClick = {() => mpRef.current.changePage('Resume')} text = "Resume" />
+          <Button handleClick = {() => mpRef.current.changePage('Projects')} text = "Projects" />
           <Button handleClick = {() => mpRef.current.changePage('About Me')} text = "About" />
           <Button handleClick = {() => mpRef.current.changePage('Contact')} text = "Contact" />
         </div>
