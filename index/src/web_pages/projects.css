@@ -8,6 +8,7 @@
 .repo-body {
     padding-left: 10px;
     padding-right: 10px;
+    overflow: hidden;
 }
 
 .repo-body > div {
@@ -15,7 +16,6 @@
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 10px;
-    
 }
 
 .list {
