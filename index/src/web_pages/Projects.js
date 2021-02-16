@@ -29,7 +29,7 @@ const RepoElement = ({repo}) => {
 
     const alterRepoBody = useCallback(() =>
     {
-        console.log('Update Size');
+        //console.log('Update Size');
 
         let speed = 5;
         let repoBody = state.current;
@@ -78,13 +78,10 @@ const RepoElement = ({repo}) => {
 
     // Grab the toy image for the component
     const getToyImage = () => {
+
         if(toyPhotoLoading.json && toyPhotoLoading.json.download_url)
-        {
-            console.log('Loaded Toy Image:', toyPhotoLoading);
             return toyPhotoLoading.json.download_url;
-        }
         
-        console.log('No toy image found. Loaded Default Image');
         return toyDefault;
     }
 
