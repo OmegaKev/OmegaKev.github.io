@@ -1,7 +1,9 @@
 import {useState, useEffect, useCallback, useRef} from 'react';
 import './projects.css';
+import toyDefault from '../assets/images/GitHub-logo.png';
 
 const RepoElement = ({repo}) => {
+    const [toyPhotoLoading, setToyPhotoLoading] = useState({loading: false, image: toyDefault});
     const [repoBody, setRepoBody] = useState({open: true, size: 'auto'});
     const animation_interval = useRef();
     const max_height = useRef();
@@ -28,6 +30,7 @@ const RepoElement = ({repo}) => {
     const alterRepoBody = useCallback(() =>
     {
         console.log('Update Size');
+
         let speed = 5;
         let repoBody = state.current;
     
@@ -42,21 +45,48 @@ const RepoElement = ({repo}) => {
 
     }, [setSize, max_height]);
 
-    // Set max height of list
+    // Set variables on load
     useEffect(() => {
+        // Set max height of list
         max_height.current = document.getElementById(repo.id).clientHeight;
         setRepoBody(repoBody => ({open: repoBody.open, size: max_height.current}));
         console.log(max_height.current);
     }, []);
 
+    // Load toy image from github repo
+    useEffect(()=> {
+        // Set the image for the github listing
+        const get_toy_url = repo.url + "/contents/ToyPreview.png";
+
+        setToyPhotoLoading({loading: true});
+        fetch(get_toy_url)
+        .then(res => res.json())
+        .then((data) => setToyPhotoLoading({loading: false, json: data}));
+
+        console.log("Loading Image from Github");
+        
+    }, [setToyPhotoLoading]);
+
     // Animate closing/opening project boxes
     useEffect(() => {
-        if(!isNaN(max_height.current))
+        if(!isNaN(repoBody.size))
             animation_interval.current = setInterval(alterRepoBody, 10);
         return () => {
             if(animation_interval.current)clearInterval(animation_interval.current);
         }
     }, [repoBody.open]);
+
+    // Grab the toy image for the component
+    const getToyImage = () => {
+        if(toyPhotoLoading.json && toyPhotoLoading.json.download_url)
+        {
+            console.log('Loaded Toy Image:', toyPhotoLoading);
+            return toyPhotoLoading.json.download_url;
+        }
+        
+        console.log('No toy image found. Loaded Default Image');
+        return toyDefault;
+    }
 
     return (
         <li key ={repo.id} className="list">
@@ -65,10 +95,13 @@ const RepoElement = ({repo}) => {
             </div>
             <div className="repo-body" id={repo.id} style={{height: repoBody.size}}>
                 <div className = "repo-body-l-child">
-                    <span>Image</span>
+                    <img src = {getToyImage()} alt="Github" />
                 </div>
                 <div className = "repo-body-r-child">
-                    <div><span><a href = {repo.html_url} target="_blank" rel="noreferrer">{repo.html_url}</a></span><span>Run</span></div>
+                    <div className = "repo-body-r-item-header">
+                        <span><a href = {repo.html_url} target="_blank" rel="noreferrer">{repo.html_url}</a></span>
+                        <span>Run</span>
+                    </div>
                     <span>{repo.description}</span>
                 </div>
             </div>

@@ -8,16 +8,20 @@
 .repo-body {
     display:flex;
     flex-direction: row;
-    padding-left: 10px;
-    padding-right: 10px;
     overflow: hidden;
 }
 .repo-body-l-child {
-    width: 200px;
+    width: 280px;
     height: 200px;
 }
 
-.repo-body-r-child > div {
+.repo-body-r-child {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.repo-body-r-item-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -33,5 +37,3 @@
 .list > div {
     border: solid 1px;
 }
-
-
