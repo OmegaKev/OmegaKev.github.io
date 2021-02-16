@@ -45,7 +45,7 @@ const RepoElement = ({repo}) => {
     useEffect(() => {
         // Animate closing/opening project boxes
         if(animation_interval.current)clearInterval(animation_interval.current);
-        animation_interval.current = setInterval(alterRepoBody, 20);
+        animation_interval.current = setInterval(alterRepoBody, 10);
     }, [repoBody.open]);
 
     return (
@@ -55,8 +55,13 @@ const RepoElement = ({repo}) => {
             </div>
 
             <div className="repo-body" style={{'height': repoBody.size}}>
-                <div><span>{repo.html_url}</span><span>Run</span></div>
-                <span>{repo.description}</span>
+                <div className = "repo-body-l-child">
+                    <span>Image</span>
+                </div>
+                <div className = "repo-body-r-child">
+                    <div><span><a href = {repo.html_url} target="_blank">{repo.html_url}</a></span><span>Run</span></div>
+                    <span>{repo.description}</span>
+                </div>
             </div>
         </>
     );

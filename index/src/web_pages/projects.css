@@ -6,12 +6,19 @@
 }
 
 .repo-body {
+    display:flex;
+    flex-direction: row;
     padding-left: 10px;
     padding-right: 10px;
     overflow: hidden;
 }
+.repo-body-l-child {
+    align-self: center;
+    width: 200px;
+    height: 200px;
+}
 
-.repo-body > div {
+.repo-body-r-child > div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
