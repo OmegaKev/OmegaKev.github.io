@@ -13,12 +13,12 @@ const RepoElement = ({repo}) => {
         // Keep new value within 0 - 100 range
         let new_value = Math.max(0, Math.min(state.current.size + value, 100));
 
-        setRepoBody({open: repoBody.open, size: new_value});
-    }, [repoBody]);
+        setRepoBody(repoBody => ({open: repoBody.open, size: new_value}));
+    }, []);
 
     const setOpenState = useCallback((state) => {
-        setRepoBody({open: state, size: repoBody.size});
-    }, [repoBody]);
+        setRepoBody(repoBody => ({open: state, size: repoBody.size}));
+    }, []);
 
     const toggleRepoBody = () => {
         setOpenState(!repoBody.open);
@@ -55,7 +55,7 @@ const RepoElement = ({repo}) => {
             </div>
 
             <div className="repo-body" style={{'height': repoBody.size}}>
-                <div><span>{repo.git_url}</span><span>Run</span></div>
+                <div><span>{repo.html_url}</span><span>Run</span></div>
                 <span>{repo.description}</span>
             </div>
         </>
