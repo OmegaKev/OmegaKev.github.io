@@ -1,4 +1,4 @@
-import pdf_resume from '../assets/documents/KHallResume.pdf';
+import pdf_resume from '../assets/documents/KevinHall_Resume_081924.pdf';
 
 const Page_Resume = () =>
 {
