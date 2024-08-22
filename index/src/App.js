@@ -1,5 +1,4 @@
 import './App.css';
-import {useState} from 'react';
 import React from 'react';
 import proImage from './assets/images/kh_picture.jpg';
 import logo from './logo.svg'
