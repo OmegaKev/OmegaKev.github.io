@@ -33,10 +33,10 @@ body > #root > div {
   height: 100vh;
 }
 
-.header_name {
+.header-name {
   text-align: center;
   font-size: xx-large;
-  margin-bottom: 5px;
+  padding: 5px;
 }
 
 .side-by-side_layout
@@ -55,18 +55,20 @@ body > #root > div {
 {
   display: grid;
   grid-template-rows: 250px min-content auto;
+  align-items: center;
 }
 
 .left-column > div,
 .right-column > div
 {
   display: flex;
+  width: '100%';
   flex-flow: column;
   align-items: center;
 }
 
 .left-side_button {
-  width: 80px;
+  width: 100px;
 }
 
 .content-area {

@@ -1,6 +1,6 @@
 import {useState, useEffect, useCallback, useRef} from 'react';
 import './projects.css';
-import toyDefault from '../assets/images/GitHub-logo.png';
+import toyDefault from 'src/assets/images/GitHub-logo.png';
 
 const RepoElement = ({repo}) => {
     const [toyPhotoLoading, setToyPhotoLoading] = useState({loading: false, image: toyDefault});
