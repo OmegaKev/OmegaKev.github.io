@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.b6d94472.css",
-    "main.js": "/static/js/main.feda6e60.js",
-    "static/js/453.f590d477.chunk.js": "/static/js/453.f590d477.chunk.js",
+    "main.css": "/static/css/main.03ecf9cc.css",
+    "main.js": "/static/js/main.e8c7e9e4.js",
+    "static/js/453.31b71b8c.chunk.js": "/static/js/453.31b71b8c.chunk.js",
     "static/media/KevinHall_Resume_081924.pdf": "/static/media/KevinHall_Resume_081924.a1d5d8ac52cf8d021a64.pdf",
     "static/media/kh_picture.jpg": "/static/media/kh_picture.c70fdebdc49decadf193.jpg",
     "static/media/GitHub-logo.png": "/static/media/GitHub-logo.a34f373e662928c21416.png",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
-    "main.b6d94472.css.map": "/static/css/main.b6d94472.css.map",
-    "main.feda6e60.js.map": "/static/js/main.feda6e60.js.map",
-    "453.f590d477.chunk.js.map": "/static/js/453.f590d477.chunk.js.map"
+    "main.03ecf9cc.css.map": "/static/css/main.03ecf9cc.css.map",
+    "main.e8c7e9e4.js.map": "/static/js/main.e8c7e9e4.js.map",
+    "453.31b71b8c.chunk.js.map": "/static/js/453.31b71b8c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b6d94472.css",
-    "static/js/main.feda6e60.js"
+    "static/css/main.03ecf9cc.css",
+    "static/js/main.e8c7e9e4.js"
   ]
 }
